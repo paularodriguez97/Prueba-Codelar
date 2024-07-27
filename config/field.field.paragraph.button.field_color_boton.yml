@@ -1,0 +1,22 @@
+uuid: c6542916-4219-48ce-9977-166f2b96f748
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_boton
+    - paragraphs.paragraphs_type.button
+  module:
+    - color_field
+id: paragraph.button.field_color_boton
+field_name: field_color_boton
+entity_type: paragraph
+bundle: button
+label: 'Color Botón'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

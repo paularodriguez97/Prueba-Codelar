@@ -1,0 +1,25 @@
+uuid: 4dcdfe29-c67b-49bc-b8bc-1ccf57915b99
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform
+    - paragraphs.paragraphs_type.hero
+  module:
+    - webform
+id: paragraph.hero.field_webform
+field_name: field_webform
+entity_type: paragraph
+bundle: hero
+label: Webform
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

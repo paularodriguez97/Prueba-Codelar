@@ -1,0 +1,37 @@
+.glide.carrousel {
+  margin-bottom: 60px;
+
+  .field--name-field-image-card {
+    margin: 0 auto 20px;
+    height: 200px;
+    max-width: 285px;
+  }
+
+  .field--name-field-title-card {
+    @include title(4);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .field--name-field-description-card {
+    @include font-style($c-black, szrem(20), $Helv-rg, 100, 20px, 1px)
+  }
+}
+
+.glide-cards {
+  .field--name-field-image-card {
+    margin-bottom: 20px;
+    height: 200px;
+    max-width: 285px;
+  }
+
+  .field--name-field-title-card {
+    @include font-style($c-gray, szrem(24), $Gal-md, 600, 24px, normal);
+    text-align: center;
+    margin-bottom: 20px 0;
+  }
+
+  .field--name-field-description-card {
+    @include font-style($c-white, szrem(20), $Helv-rg, 100, 20px, 1px)
+  }
+}

@@ -1,0 +1,87 @@
+uuid: 2d3957c1-eaf0-43b3-bf73-c1aa9ce54ae9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.imagen_texto.field_image_hero
+    - field.field.paragraph.imagen_texto.field_text
+    - paragraphs.paragraphs_type.imagen_texto
+    - responsive_image.styles.image_hero
+  module:
+    - layout_builder
+    - responsive_image
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'image and text'
+          context_mapping: {  }
+          column_widths: 50-50
+        components:
+          0e52167c-5436-4518-9cab-d4c8edc38855:
+            uuid: 0e52167c-5436-4518-9cab-d4c8edc38855
+            region: second
+            configuration:
+              id: 'field_block:paragraph:imagen_texto:field_text'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0a295051-0990-4043-a2cf-81b5791f1c95:
+            uuid: 0a295051-0990-4043-a2cf-81b5791f1c95
+            region: first
+            configuration:
+              id: 'field_block:paragraph:imagen_texto:field_image_hero'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: narrow
+                  image_link: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: paragraph.imagen_texto.default
+targetEntityType: paragraph
+bundle: imagen_texto
+mode: default
+content:
+  field_image_hero:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: image_hero
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

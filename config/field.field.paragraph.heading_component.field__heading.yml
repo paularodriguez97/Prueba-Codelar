@@ -1,0 +1,22 @@
+uuid: d71e921e-0149-449a-abd5-f2617478cbd4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field__heading
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - text
+id: paragraph.heading_component.field__heading
+field_name: field__heading
+entity_type: paragraph
+bundle: heading_component
+label: Encabezado
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

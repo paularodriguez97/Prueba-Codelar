@@ -1,0 +1,42 @@
+uuid: db0665fa-2b2f-4e1f-a778-d39ec671b0ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.heading_component.field__heading
+    - field.field.paragraph.heading_component.field_color_fondo_de_texto
+    - field.field.paragraph.heading_component.field_color_texto
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - color_field
+    - text
+id: paragraph.heading_component.default
+targetEntityType: paragraph
+bundle: heading_component
+mode: default
+content:
+  field__heading:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color_fondo_de_texto:
+    type: color_field_widget_html5
+    weight: 2
+    region: content
+    settings:
+      show_extra: false
+    third_party_settings: {  }
+  field_color_texto:
+    type: color_field_widget_html5
+    weight: 1
+    region: content
+    settings:
+      show_extra: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

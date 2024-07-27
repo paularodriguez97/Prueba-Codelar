@@ -1,0 +1,20 @@
+uuid: dccb3b95-db8d-4411-a189-3b2ddd6f6d6a
+langcode: es
+status: true
+dependencies:
+  module:
+    - color_field
+    - paragraphs
+id: paragraph.field_color_fondo_de_texto
+field_name: field_color_fondo_de_texto
+entity_type: paragraph
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

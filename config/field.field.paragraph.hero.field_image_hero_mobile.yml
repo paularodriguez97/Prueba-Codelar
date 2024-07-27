@@ -1,0 +1,38 @@
+uuid: 1b0eb2e8-6b0f-4ea4-b983-f1995d84f251
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_hero_mobile
+    - paragraphs.paragraphs_type.hero
+  module:
+    - image
+id: paragraph.hero.field_image_hero_mobile
+field_name: field_image_hero_mobile
+entity_type: paragraph
+bundle: hero
+label: 'Imagen Mobile Hero '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

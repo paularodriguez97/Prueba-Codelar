@@ -1,0 +1,22 @@
+uuid: 07a608cc-14ad-4d18-b497-5ded86af96ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.imagen_texto
+  module:
+    - text
+id: paragraph.imagen_texto.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: imagen_texto
+label: Texto
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

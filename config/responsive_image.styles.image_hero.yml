@@ -1,0 +1,30 @@
+uuid: abd44bcb-a0b6-4c40-a6ac-b81013a030ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - image.style.max_1300x1300
+    - image.style.max_650x650
+    - image.style.wide
+  theme:
+    - codelar
+id: image_hero
+label: 'Image Hero Desktop'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: max_1300x1300
+    breakpoint_id: codelar.desktopPlus
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: codelar.desktop
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: max_650x650
+    breakpoint_id: codelar.tablet
+    multiplier: 1x
+breakpoint_group: codelar
+fallback_image_style: '_original image_'

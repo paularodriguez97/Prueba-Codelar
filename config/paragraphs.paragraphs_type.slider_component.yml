@@ -1,0 +1,10 @@
+uuid: cb134893-360e-4aa7-af48-4623a0970a67
+langcode: es
+status: true
+dependencies: {  }
+id: slider_component
+label: 'Componente Carrusel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

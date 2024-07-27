@@ -1,0 +1,17 @@
+resume_article:
+  label: 'Layout componente sección'
+  path: layouts/components
+  template: layout--section
+  category: 'Components'
+  default_region: content
+  icon_map:
+    - [one_content]
+    - [two_content]
+    - [three_content]
+  regions:
+    one_content:
+      label: Primero - Titulo
+    two_content:
+      label: Segundo - Webform
+    three_content:
+      label: Segundo - content

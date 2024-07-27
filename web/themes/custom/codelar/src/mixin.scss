@@ -1,0 +1,90 @@
+/// Estilos para los textos
+@mixin font-style($color, $font-size, $font-family, $font-weight, $line-height, $letter-spacing: normal) {
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+/// Estilos para los botones
+@mixin button($color, $bg-color, $pad-lat, $pad-up: 20px) {
+  background-color: $bg-color;
+  color: $color;
+  display: inline-block;
+  font-size: szrem(14);
+  font-family: 'Helvetica-md';
+  font-weight: bold;
+  padding: $pad-up $pad-lat;
+  box-shadow: 3px 4px 4px 0 $rgba2;
+  width: 150px;
+  max-height: 40px;
+  border-radius: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+/// Estilos para los titulos
+@mixin title($type: 1) {
+  @if $type == 1 {
+    text-align: left;
+    margin: 5px 0 45px;
+    padding: 0 0 22px 0;
+    position: relative;
+    @include font-style($c-black, szrem(40), $Gal-md, 600, 40px, normal);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 6px;
+      margin: auto;
+      width: 100px;
+      height: 2px;
+      background: #231f20;
+    }
+  }
+
+  @if $type == 2 {
+    margin: 40px 0 20px;
+    padding: 5px;
+    @include font-style('', szrem(32), $Gal-md, 600, 32px, normal)
+  }
+
+  @if $type == 3 {
+    margin: 40px 0 20px;
+    padding: 5px;
+    @include font-style($c-black, szrem(26), $Gal-md, 600, 26px, normal)
+  }
+
+  @if $type == 4 {
+    margin: 20px 0;
+    @include font-style($c-blue-light, szrem(24), $Gal-md, 600, 24px, normal)
+  }
+
+  @media (max-width: $land-mobile) {
+    @if $type == 1 {
+      margin: 5px 0 25px;
+      padding: 0 0 12px 0;
+      @include font-style($c-black, szrem(20), $Gal-md, 600, 20px, normal);
+    }
+
+    @if $type == 2 {
+      margin: 20px 0 10px;
+      @include font-style($c-black, szrem(16), $Gal-md, 600, 16px, normal)
+    }
+
+    @if $type == 3 {
+      margin: 20px 0 10px;
+      @include font-style($c-black, szrem(14), $Gal-md, 600, 14px, normal)
+    }
+
+    @if $type == 4 {
+      margin: 20px 0 10px;
+      @include font-style($c-blue-light, szrem(12), $Gal-md, 600, 20px, normal)
+    }
+  }
+}

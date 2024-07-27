@@ -1,0 +1,35 @@
+<?php
+
+use \Drupal\Core\Entity\EntityInterface;
+use \Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+/**
+ * Implements hook_entity_view().
+ *
+ * Agrega el valor del titulo al meta-tag description.
+ */
+function codelar_layouts_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'article') {
+
+    $field_componentes = $entity->get('field_componentes')->target_id;
+    $referenced_entity = \Drupal::entityTypeManager()->getStorage('paragraph')->load($field_componentes);
+
+    $field_seccion_components = $referenced_entity->get('field_seccion_components')->target_id;
+    $entity_load = \Drupal::entityTypeManager()->getStorage('paragraph')->load($field_seccion_components);
+
+    $value_heading = strip_tags($entity_load->get('field_heading')->value);
+
+    if (isset($value_heading)){
+        $id_node = $entity->id();
+        if ($entity->hasField('field_meta_tags')) {
+            $meta_tags = [
+                'description' => $value_heading,
+            ];
+            $meta_tags_json = json_encode($meta_tags);
+            $entity->set('field_meta_tags', $meta_tags_json);
+        }
+    }
+
+  }
+}

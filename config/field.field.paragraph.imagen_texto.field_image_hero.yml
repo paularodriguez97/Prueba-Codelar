@@ -1,0 +1,38 @@
+uuid: 89659c95-65a9-4e11-8320-6774c7a6a9d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_hero
+    - paragraphs.paragraphs_type.imagen_texto
+  module:
+    - image
+id: paragraph.imagen_texto.field_image_hero
+field_name: field_image_hero
+entity_type: paragraph
+bundle: imagen_texto
+label: Imagen
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

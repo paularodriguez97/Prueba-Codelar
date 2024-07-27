@@ -1,0 +1,22 @@
+uuid: 9b6b1a7a-0ecd-45dc-b607-93fe20c699b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - codelar
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: codelar_powered
+theme: codelar
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

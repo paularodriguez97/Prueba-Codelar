@@ -1,0 +1,25 @@
+uuid: 8ec5c72d-c08c-49d9-80f7-494f2d0d69e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_cards_to_slider
+    - paragraphs.paragraphs_type.slider_component
+id: paragraph.slider_component.field_number_of_cards_to_slider
+field_name: field_number_of_cards_to_slider
+entity_type: paragraph
+bundle: slider_component
+label: 'Numero de items - Carrusel'
+description: "Seleccione el numero de items que quiere que se visualicen en el slider.  <strong> El numero debe ser IMPAR</strong> \r\nMinimo 1 - Maximo 9."
+required: false
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 1
+  max: 9
+  prefix: ''
+  suffix: ''
+field_type: integer

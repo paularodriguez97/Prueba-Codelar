@@ -1,0 +1,104 @@
+<?php
+
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\node\NodeInterface;
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Agrega clases al html de acuerdo al nodo.
+ */
+function codelar_preprocess_html(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+  }
+
+  $result = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  $variables['attributes']['class'][] = 'path-' . str_replace('/', '-', trim($result, '/'));
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Añade los valores de los campos de configuracion de los campos a los template para darle estilos a los campos.
+ */
+function codelar_preprocess_field(array &$variables) {
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node instanceof NodeInterface && $node->bundle() == 'article') {
+    $all_field_values = [];
+
+    foreach ($node->getFields() as $field_name => $field) {
+      $field_items = $node->get($field_name)->getValue();
+      if (count($field_items) > 0) {
+        $all_field_values[$field_name] = [];
+        foreach ($field_items as $item) {
+          $all_field_values[$field_name][] = $item;
+        }
+      }
+      else {
+        $all_field_values[$field_name] = $node->get($field_name)->value;
+      }
+    }
+
+    $values=[];
+    foreach ($all_field_values['field_componentes'] as $item) {
+      $entity_load = \Drupal::entityTypeManager()->getStorage('paragraph')->load($item['target_id']);
+
+      if ($entity_load->hasField('field_seccion_components')) {
+        $field_seccion_components = $entity_load->get('field_seccion_components')->target_id;
+        $values[] = \Drupal::entityTypeManager()->getStorage('paragraph')->load($field_seccion_components);
+      }
+
+      if ($entity_load->hasField('field_color_boton')) {
+        $values['button'] = $entity_load->get('field_color_boton')->color;
+      }
+
+      if ($entity_load->hasField('field_color_fondo_de_texto') && $entity_load->hasField('field_color_texto')) {
+        $values['field_color_fondo_de_texto'] = $entity_load->get('field_color_fondo_de_texto')->color;
+        $values['field_color_texto'] = $entity_load->get('field_color_texto')->color;
+      }
+
+    }
+
+    if (!empty($values[0])) {
+      $variables['field_hero_color_boton'] = ($values[0]->hasField('field_color_boton')) ? $values[0]->get('field_color_boton')->color : '#6fb2cc';
+      $variables['field_hero_color_texto'] = ($values[0]->hasField('field_color_texto')) ? $values[0]->get('field_color_texto')->color : '#6fb2cc';
+      $variables['field_hero_color_fondo_de_texto'] = ($values[0]->hasField('field_color_fondo_de_texto')) ? $values[0]->get('field_color_fondo_de_texto')->color : '#6fb2cc';
+      $variables['field_hero_color_texto_subtitulo'] = ($values[0]->hasField('field_color_texto_subtitulo')) ? $values[0]->get('field_color_texto_subtitulo')->color : '#6fb2cc';
+      $variables['field_hero_color_fondo_de_texto_subti'] = ($values[0]->hasField('field_color_fondo_de_texto_subti')) ? $values[0]->get('field_color_fondo_de_texto_subti')->color : '#6fb2cc';
+    }
+
+    if (!empty($values[1])) {
+      $variables['field_color_titulo_card'] = ($values[1]->hasField('field_color_titulo_card')) ? $values[1]->get('field_color_titulo_card')->color : '#6fb2cc';
+    }
+
+    $variables['button'] = $values['button'] ?? '#6fb2cc';
+    $variables['field_color_fondo_de_texto'] = $values['field_color_fondo_de_texto'] ?? '#6fb2cc';
+    $variables['field_color_texto'] = $values['field_color_texto'] ?? '#6fb2cc';
+  }
+
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter()
+ *
+ * Crear una sugerencia de plantilla a los campos de acuerdo al paragraph que lo contiene.
+ */
+function codelar_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element'][0]['#paragraph']) && $variables['element'][0]['#paragraph'] instanceof Paragraph) {
+    $paragraph = $variables['element'][0]['#paragraph'];
+    $bundle = $paragraph->bundle();
+    if (isset($variables['element']['#field_name'])) {
+      $suggestions[] = 'field__' . $variables['element']['#field_name'] . '__' . $bundle;
+    }
+  }
+}
+

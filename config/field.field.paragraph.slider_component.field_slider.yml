@@ -1,0 +1,55 @@
+uuid: 10a34c9c-8c4f-426e-bb03-a48c82749f30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slider
+    - paragraphs.paragraphs_type.cards
+    - paragraphs.paragraphs_type.slider_component
+  module:
+    - entity_reference_revisions
+id: paragraph.slider_component.field_slider
+field_name: field_slider
+entity_type: paragraph
+bundle: slider_component
+label: Carrusel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards: cards
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 10
+        enabled: false
+      cards:
+        weight: 11
+        enabled: true
+      heading_component:
+        weight: 12
+        enabled: false
+      hero:
+        weight: 13
+        enabled: false
+      imagen_texto:
+        weight: 14
+        enabled: false
+      seccion:
+        weight: 15
+        enabled: false
+      slider_component:
+        weight: 16
+        enabled: false
+      text_component:
+        weight: 17
+        enabled: false
+      webform_component:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

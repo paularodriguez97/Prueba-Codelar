@@ -1,0 +1,19 @@
+uuid: 63cabf7f-e611-4925-b449-7eb6452cba5a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_card
+    - paragraphs.paragraphs_type.cards
+id: paragraph.cards.field_title_card
+field_name: field_title_card
+entity_type: paragraph
+bundle: cards
+label: 'Titulo card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

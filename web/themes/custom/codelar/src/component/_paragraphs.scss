@@ -1,0 +1,89 @@
+.paragraph--type--hero {
+  position: relative;
+  padding: 60px 0;
+  margin-bottom: 60px;
+  picture {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .field--name-field__heading {
+    @include title(3);
+    background: $c-white;
+  }
+
+  .container-content__title .field--name-field-heading {
+    margin-bottom: 60px;
+    max-width: max-content;
+    background: $c-blue-light;
+    color: $c-black;
+    strong, p {
+      @include title(2);
+    }
+  }
+
+  .field--name-field-text {
+    color: $c-white;
+    font-family: $Ops-rg;
+    font-size: szrem(16);
+  }
+
+
+  .field--name-field-boton {
+    @include button($c-white, $c-yellow, 20px, 20px);
+    box-shadow: 3px 4px 4px 0 $rgba2;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: $land-mobile) {
+  .paragraph--type--hero {
+    padding: 20px 0;
+    margin-bottom: 30px;
+
+    .container-content__title .field--name-field-heading {
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    .field--name-field-text {
+      font-size: szrem(10);
+    }
+
+
+    .field--name-field-boton {
+      @include button($c-white, $c-yellow, 12px, 12px);
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: $s-mobile) {
+  .paragraph--type--hero {
+    picture {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      display: block;
+      z-index: 0;
+    }
+
+    .field--name-field__heading {
+      padding: 0 20px;
+    }
+
+    .container-content__title .field--name-field-heading {
+      position: absolute;
+      top: 30px;
+    }
+
+    .field--name-field-text {
+      color: $c-black;
+      padding: 0 20px;
+    }
+
+  }
+}

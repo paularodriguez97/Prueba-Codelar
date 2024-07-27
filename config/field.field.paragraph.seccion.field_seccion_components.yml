@@ -1,0 +1,59 @@
+uuid: 69b14fa9-ace9-4469-bf10-f08081bb1e4f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_seccion_components
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.imagen_texto
+    - paragraphs.paragraphs_type.seccion
+    - paragraphs.paragraphs_type.slider_component
+  module:
+    - entity_reference_revisions
+id: paragraph.seccion.field_seccion_components
+field_name: field_seccion_components
+entity_type: paragraph
+bundle: seccion
+label: 'Sección Componentes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero: hero
+      imagen_texto: imagen_texto
+      slider_component: slider_component
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 7
+        enabled: false
+      cards:
+        weight: 9
+        enabled: false
+      heading_component:
+        weight: 8
+        enabled: false
+      hero:
+        weight: 9
+        enabled: true
+      imagen_texto:
+        weight: 11
+        enabled: true
+      seccion:
+        weight: 6
+        enabled: false
+      slider_component:
+        weight: 16
+        enabled: true
+      text_component:
+        weight: 10
+        enabled: false
+      webform_component:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

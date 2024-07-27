@@ -1,0 +1,25 @@
+uuid: 2442f324-e2c5-47b4-a4bb-1ddb4d1c60b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tiempo_transicion_slider
+    - paragraphs.paragraphs_type.slider_component
+id: paragraph.slider_component.field_tiempo_transicion_slider
+field_name: field_tiempo_transicion_slider
+entity_type: paragraph
+bundle: slider_component
+label: 'Tiempo Transición Slider'
+description: 'Este valor de tiempo únicamente se aplicara si el <strong>Autoplay</strong> se encuentra activo.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: seg
+field_type: integer

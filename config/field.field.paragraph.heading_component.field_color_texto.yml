@@ -1,0 +1,22 @@
+uuid: 9077a481-46ed-4e77-9278-08de610cf1bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_texto
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - color_field
+id: paragraph.heading_component.field_color_texto
+field_name: field_color_texto
+entity_type: paragraph
+bundle: heading_component
+label: 'Color Texto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

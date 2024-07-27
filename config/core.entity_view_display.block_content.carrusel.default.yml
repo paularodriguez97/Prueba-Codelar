@@ -1,0 +1,34 @@
+uuid: 4df8cd5a-1e61-495c-a4a3-2974538349e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.carrusel
+    - field.field.block_content.carrusel.body
+    - field.field.block_content.carrusel.field_items_carrusel
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.carrusel.default
+targetEntityType: block_content
+bundle: carrusel
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_items_carrusel:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

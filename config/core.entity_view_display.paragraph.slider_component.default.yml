@@ -1,0 +1,57 @@
+uuid: c889a497-b6d2-4050-8647-4188519aa8a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_component.field_autoplay
+    - field.field.paragraph.slider_component.field_color_titulo_card
+    - field.field.paragraph.slider_component.field_number_of_cards_to_slider
+    - field.field.paragraph.slider_component.field_slider
+    - field.field.paragraph.slider_component.field_tiempo_transicion_slider
+    - paragraphs.paragraphs_type.slider_component
+  module:
+    - entity_reference_revisions
+id: paragraph.slider_component.default
+targetEntityType: paragraph
+bundle: slider_component
+mode: default
+content:
+  field_autoplay:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_number_of_cards_to_slider:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slider:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tiempo_transicion_slider:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_color_titulo_card: true

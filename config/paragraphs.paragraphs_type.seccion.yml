@@ -1,0 +1,10 @@
+uuid: 615074d8-b47c-4a2c-9549-456e6f9a0235
+langcode: es
+status: true
+dependencies: {  }
+id: seccion
+label: Sección
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,8 @@
+uuid: bf974626-d682-456c-b6c6-9f30d849398d
+langcode: es
+status: true
+dependencies: {  }
+id: carrusel
+label: Carousel
+revision: false
+description: null

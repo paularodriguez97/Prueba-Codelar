@@ -1,0 +1,22 @@
+uuid: b6f4ede8-c394-461c-b3ea-ee6d8649d1a5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_fondo_de_texto
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - color_field
+id: paragraph.heading_component.field_color_fondo_de_texto
+field_name: field_color_fondo_de_texto
+entity_type: paragraph
+bundle: heading_component
+label: 'Texto fondo color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

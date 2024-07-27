@@ -1,0 +1,57 @@
+uuid: bb6f8173-8399-42e9-9f7c-6e0b36c2e100
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_componentes
+    - node.type.article
+    - paragraphs.paragraphs_type.button
+    - paragraphs.paragraphs_type.heading_component
+    - paragraphs.paragraphs_type.seccion
+    - paragraphs.paragraphs_type.text_component
+    - paragraphs.paragraphs_type.webform_component
+  module:
+    - entity_reference_revisions
+id: node.article.field_componentes
+field_name: field_componentes
+entity_type: node
+bundle: article
+label: Components
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      webform_component: webform_component
+      button: button
+      heading_component: heading_component
+      seccion: seccion
+      text_component: text_component
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 8
+        enabled: true
+      heading_component:
+        weight: 9
+        enabled: true
+      hero:
+        weight: 10
+        enabled: false
+      imagen_texto:
+        weight: 11
+        enabled: false
+      seccion:
+        weight: 11
+        enabled: true
+      text_component:
+        weight: 12
+        enabled: true
+      webform_component:
+        weight: 7
+        enabled: true
+field_type: entity_reference_revisions

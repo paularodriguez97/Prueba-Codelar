@@ -1,0 +1,20 @@
+uuid: ea879f04-9f80-4457-8a99-23409659f45b
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_number_of_cards_to_slider
+field_name: field_number_of_cards_to_slider
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

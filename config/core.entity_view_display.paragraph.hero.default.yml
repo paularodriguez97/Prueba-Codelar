@@ -1,0 +1,296 @@
+uuid: 1a9e1feb-d98a-4144-a2b3-0598138806b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero.field__heading
+    - field.field.paragraph.hero.field_boton
+    - field.field.paragraph.hero.field_color_boton
+    - field.field.paragraph.hero.field_color_fondo_de_texto
+    - field.field.paragraph.hero.field_color_fondo_de_texto_subti
+    - field.field.paragraph.hero.field_color_texto
+    - field.field.paragraph.hero.field_color_texto_subtitulo
+    - field.field.paragraph.hero.field_heading
+    - field.field.paragraph.hero.field_image_hero
+    - field.field.paragraph.hero.field_image_hero_mobile
+    - field.field.paragraph.hero.field_text
+    - field.field.paragraph.hero.field_webform
+    - paragraphs.paragraphs_type.hero
+    - responsive_image.styles.image_hero
+  module:
+    - codelar_layouts
+    - color_field
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - responsive_image
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'image hero'
+          context_mapping: {  }
+        components:
+          44864480-0a3e-4695-883e-b588942b6e9f:
+            uuid: 44864480-0a3e-4695-883e-b588942b6e9f
+            region: content
+            configuration:
+              id: 'field_block:paragraph:hero:field_image_hero'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: image_hero
+                  image_link: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          234c7d50-85ba-40f2-b538-3a0386ae3efd:
+            uuid: 234c7d50-85ba-40f2-b538-3a0386ae3efd
+            region: content
+            configuration:
+              id: 'field_block:paragraph:hero:field_image_hero_mobile'
+              label: 'Imagen Mobile Hero '
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: responsive_image
+                label: hidden
+                settings:
+                  responsive_image_style: image_hero_mobile
+                  image_link: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: resume_article
+        layout_settings:
+          label: 'layout hero'
+          context_mapping: {  }
+        components:
+          5792fcaf-6256-42cb-aaf4-5b170337ae21:
+            uuid: 5792fcaf-6256-42cb-aaf4-5b170337ae21
+            region: one_content
+            configuration:
+              id: 'field_block:paragraph:hero:field_heading'
+              label: Heading
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          70d452d2-3333-4153-8a6e-8568230a5178:
+            uuid: 70d452d2-3333-4153-8a6e-8568230a5178
+            region: two_content
+            configuration:
+              id: 'field_block:paragraph:hero:field_webform'
+              label: webform
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: webform_entity_reference_entity_view
+                label: hidden
+                settings:
+                  source_entity: true
+                  lazy: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          10487d53-1277-4f22-ab55-4a090d89b217:
+            uuid: 10487d53-1277-4f22-ab55-4a090d89b217
+            region: three_content
+            configuration:
+              id: 'field_block:paragraph:hero:field__heading'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0d3c8a98-4377-4c01-83fd-663df95e1cc5:
+            uuid: 0d3c8a98-4377-4c01-83fd-663df95e1cc5
+            region: three_content
+            configuration:
+              id: 'field_block:paragraph:hero:field_text'
+              label: Text
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          d411bd9c-d61e-4c38-a3de-7ff21fb17b1d:
+            uuid: d411bd9c-d61e-4c38-a3de-7ff21fb17b1d
+            region: three_content
+            configuration:
+              id: 'field_block:paragraph:hero:field_boton'
+              label: Button
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: link
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: hidden
+          context_mapping: {  }
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.hero.default
+targetEntityType: paragraph
+bundle: hero
+mode: default
+content:
+  field__heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_boton:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_color_boton:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_color_fondo_de_texto:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_color_fondo_de_texto_subti:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_color_texto:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_color_texto_subtitulo:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_hero_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image_hero:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: image_hero
+      image_link: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_hero_mobile:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_heading: true
+  field_text: true
+  field_webform: true

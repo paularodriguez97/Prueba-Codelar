@@ -1,0 +1,22 @@
+uuid: 2b6b32e9-175f-48fc-8860-40bd7bd1e603
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_fondo_de_texto_subti
+    - paragraphs.paragraphs_type.hero
+  module:
+    - color_field
+id: paragraph.hero.field_color_fondo_de_texto_subti
+field_name: field_color_fondo_de_texto_subti
+entity_type: paragraph
+bundle: hero
+label: 'Texto fondo color - Subtitulo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

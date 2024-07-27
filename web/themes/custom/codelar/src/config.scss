@@ -1,0 +1,40 @@
+$images: '../images/';
+
+//Colors
+$c-black: #1e1d1d;
+$c-gray: #6b6a6a;
+$c-blue: #29b2e9;
+$c-blue-light: #6fb2cc;
+$c-white: #fff;
+$c-yellow: #eda605;
+
+/// RGBA Colors
+$rgba1: rgba(black, .5);
+$rgba2: rgba(#00000040, .25);
+
+$c-gray: rgba(79, 79, 79, 0.6);
+$c-gray-med: #696969;
+$c-gray-light: rgba(183, 183, 183, 0.4);
+
+/// SHADOWS
+$shadow1: 0 2px 4px 0 $rgba1;
+
+//Fonts
+$Gal-md: "Galano-med";
+$Helv-rg: "Helvetica-Regular";
+$Ops-rg: "OpenSans-Regular";
+
+//Screens
+$lg-screens: 1440px;
+$md-screens: 1281px;
+$tablet: 1025px;
+$tablet-short: 930px;
+$land-mobile: 850px;
+$mobile: 767px;
+$sm-mobile: 540px;
+$s-mobile: 480px;
+$xs-mobile: 375px;
+
+:root {
+  --light-eggplant-20: rgba(110, 71, 150, 0.2);
+}

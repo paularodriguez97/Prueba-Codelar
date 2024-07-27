@@ -1,0 +1,22 @@
+name: Codelar
+type: theme
+description: "Sub theme for Codelar"
+core: 10.x
+core_version_requirement: ^9 || ^10
+base theme: olivero
+
+
+libraries:
+  - codelar/global-styling
+  - codelar/glide
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  hero: Hero (full width)
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  content: Content
+  footer_top: Footer Top
+  footer_bottom: Footer Bottom

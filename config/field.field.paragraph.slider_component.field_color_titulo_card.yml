@@ -1,0 +1,22 @@
+uuid: cb3611a9-e2a9-4c6d-af23-e041744f1ff6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_titulo_card
+    - paragraphs.paragraphs_type.slider_component
+  module:
+    - color_field
+id: paragraph.slider_component.field_color_titulo_card
+field_name: field_color_titulo_card
+entity_type: paragraph
+bundle: slider_component
+label: 'Color Titulo Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

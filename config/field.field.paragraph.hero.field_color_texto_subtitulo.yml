@@ -1,0 +1,22 @@
+uuid: 1d5af25c-75ec-4863-b6ea-c6abb27fa3b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_texto_subtitulo
+    - paragraphs.paragraphs_type.hero
+  module:
+    - color_field
+id: paragraph.hero.field_color_texto_subtitulo
+field_name: field_color_texto_subtitulo
+entity_type: paragraph
+bundle: hero
+label: 'Color Texto - Subtitulo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

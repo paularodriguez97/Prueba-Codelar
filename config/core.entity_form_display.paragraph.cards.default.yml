@@ -1,0 +1,45 @@
+uuid: 5fcad7b9-c04b-448d-a258-f277693f1067
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards.field_description_card
+    - field.field.paragraph.cards.field_image_card
+    - field.field.paragraph.cards.field_title_card
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.cards
+  module:
+    - image
+    - text
+id: paragraph.cards.default
+targetEntityType: paragraph
+bundle: cards
+mode: default
+content:
+  field_description_card:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image_card:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_title_card:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

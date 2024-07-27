@@ -1,0 +1,24 @@
+uuid: d2d83192-e3e6-4354-a29c-726d30438fcf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.seccion.field_seccion_components
+    - paragraphs.paragraphs_type.seccion
+  module:
+    - entity_reference_revisions
+id: paragraph.seccion.default
+targetEntityType: paragraph
+bundle: seccion
+mode: default
+content:
+  field_seccion_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

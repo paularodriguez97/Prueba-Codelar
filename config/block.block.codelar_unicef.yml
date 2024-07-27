@@ -1,0 +1,25 @@
+uuid: c3206f85-fbad-4e3e-be3e-44355ad4ce6a
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:carrusel:e945dcda-d619-455b-be57-e4d5be575bc7'
+  module:
+    - block_content
+  theme:
+    - codelar
+id: codelar_unicef
+theme: codelar
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:e945dcda-d619-455b-be57-e4d5be575bc7'
+settings:
+  id: 'block_content:e945dcda-d619-455b-be57-e4d5be575bc7'
+  label: Unicef
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {}

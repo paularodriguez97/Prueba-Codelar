@@ -1,0 +1,10 @@
+uuid: c1711c03-957c-4e94-80b2-73d403ffdad7
+langcode: es
+status: true
+dependencies: {  }
+id: imagen_texto
+label: 'Componente (Imagen + texto) '
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

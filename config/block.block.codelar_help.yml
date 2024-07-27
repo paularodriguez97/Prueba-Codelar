@@ -1,0 +1,22 @@
+uuid: 5a46100f-02a2-4b24-bce7-20c587542ba9
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - codelar
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: codelar_help
+theme: codelar
+region: header
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,10 @@
+uuid: 4e0b2882-13a8-4cca-90c1-460b3b5b3384
+langcode: es
+status: true
+dependencies: {  }
+id: text_component
+label: 'Componente Texto'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,71 @@
+.glide,
+.glide-cards {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+    @media (min-width: $s-mobile) and (max-width: $land-mobile) {
+      max-width: 500px;
+    }
+    @media (max-width: $s-mobile) {
+      max-width: 300px;
+    }
+
+  .glide__arrow {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .glide__arrow--left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .glide__arrow--right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.glide {
+  max-width: 1064px;
+  padding: 0 20px;
+
+  @media (min-width: $s-mobile) and (max-width: $land-mobile) {
+    max-width: 500px;
+  }
+  @media (max-width: $s-mobile) {
+    max-width: 300px;
+  }
+
+  .glide__arrow {
+    background: transparent;
+    color: $c-blue-light;
+    font-size: szrem(55);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .glide__arrow--left {
+    position: absolute;
+    left: 5px;
+    top: 62%;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .glide__arrow--right {
+    position: absolute;
+    right: 5px;
+    top: 62%;
+    transform: translateY(-50%);
+  }
+}
+
+

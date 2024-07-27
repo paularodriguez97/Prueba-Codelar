@@ -1,0 +1,55 @@
+uuid: 11f3a13c-001d-488f-a8a6-2b7bc18118cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.carrusel
+    - field.storage.block_content.field_items_carrusel
+    - paragraphs.paragraphs_type.cards
+  module:
+    - entity_reference_revisions
+id: block_content.carrusel.field_items_carrusel
+field_name: field_items_carrusel
+entity_type: block_content
+bundle: carrusel
+label: 'Items carrusel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      cards: cards
+    negate: 0
+    target_bundles_drag_drop:
+      button:
+        weight: 9
+        enabled: false
+      cards:
+        weight: 10
+        enabled: true
+      heading_component:
+        weight: 11
+        enabled: false
+      hero:
+        weight: 12
+        enabled: false
+      imagen_texto:
+        weight: 13
+        enabled: false
+      seccion:
+        weight: 14
+        enabled: false
+      slider_component:
+        weight: 16
+        enabled: false
+      text_component:
+        weight: 15
+        enabled: false
+      webform_component:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,10 @@
+uuid: f5d4ae6f-8556-4a6b-852f-264f91b27b94
+langcode: es
+status: true
+dependencies: {  }
+id: cards
+label: Carrusel
+icon_uuid: null
+icon_default: null
+description: 'Imagen + Titulo + Texto'
+behavior_plugins: {  }

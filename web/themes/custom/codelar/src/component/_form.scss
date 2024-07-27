@@ -1,0 +1,99 @@
+form.webform-submission-donation-form {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: $c-gray;
+    padding: 20px;
+    border-radius: 10px;
+    @media (max-width: $land-mobile) {
+        margin: 0 auto;
+        border-radius: 0px;
+    }
+    #edit-processed-text {
+        order: 1;
+        margin: 5px auto 40px;
+        text-align: center;
+        max-width: 280px;
+        @include font-style($c-white, szrem(16), $Gal-md, bold, 16px, 1.5px);
+    }
+
+    .webform-element-description {
+        color: $c-white;
+    }
+
+    > div {
+        order: 2;
+    }
+
+    .progress-tracker {
+        margin: 0px 0 20px;
+        .progress-text {
+            order: 1;
+            margin-top: 5px;
+            @include font-style($c-white, szrem(10), $Gal-md, bold, 10px, normal);
+        }
+        .progress-step.is-active .progress-marker{
+            color: $c-black;
+            &::before {
+                background-color: $c-white;
+            }
+        }
+
+    }
+
+    .form-type-number{
+        label {
+            margin: 0px 0 5px;
+            @include font-style($c-white, szrem(13), $Helv-rg, bold, 13px, 1px);
+        }
+        input::placeholder {
+            color: $c-gray;
+        }
+    }
+
+    .form-range {
+        margin-bottom: 50px;
+    }
+
+    #edit-actions {
+        display: flex;
+
+        .webform-button--previous {
+            order: 2;
+        }
+
+        .webform-button--next,
+        .webform-button--submit {
+            order: 1;
+            margin-bottom: 15px;
+        }
+
+        input{
+            border: 0.5px solid $c-black;
+            border-radius: 10px;
+            width: 250px;
+            margin: 0 auto;
+            border-color: $c-black;
+            display: flex;
+            justify-content: center;
+            @include font-style($c-black, szrem(18), $Gal-md, bold, 18px, 1px);
+
+        }
+    }
+
+    .form-type-webform-markup {
+        margin: 0px;
+        padding-left: 20px;
+        position: relative;
+        @include font-style($c-white, szrem(14), $Helv-rg, 900, 14px, 1px);
+        &::before {
+            content: '⚠';
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    }
+}

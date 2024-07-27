@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a three-column layout.
+ *
+ * Available variables:
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div class="section-component">
+
+  {% if content.one_content %}
+      <div {{ region_attributes.one_content.addClass('container-content__title') }}>
+        {{ content.one_content }}
+
+      </div>
+  {% endif %}
+
+  {% if content.two_content %}
+    <div {{ region_attributes.two_content.addClass('container-content__webform') }}>
+        {{ content.two_content }}
+    </div>
+  {% endif %}
+
+  {% if content.three_content %}
+    <div {{ region_attributes.three_content.addClass('container-content__text') }}>
+        {{ content.three_content }}
+    </div>
+  {% endif %}
+
+  </div>
+{% endif %}

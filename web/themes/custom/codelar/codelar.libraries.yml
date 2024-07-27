@@ -1,0 +1,19 @@
+global-styling:
+  version: 1x
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/script.js: {}
+    js/browserclass.js: {}
+
+
+
+glide:
+  css:
+    theme:
+      lib/@glidejs/glide/dist/css/glide.core.min.css: {}
+  js:
+    lib/@glidejs/glide/dist/glide.min.js: {}
+  dependencies:
+    - core/jquery

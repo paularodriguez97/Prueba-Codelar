@@ -1,0 +1,26 @@
+uuid: 4138fd41-f421-4572-a049-db51d16fe94c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.heading_component.field__heading
+    - field.field.paragraph.heading_component.field_color_fondo_de_texto
+    - field.field.paragraph.heading_component.field_color_texto
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - text
+id: paragraph.heading_component.default
+targetEntityType: paragraph
+bundle: heading_component
+mode: default
+content:
+  field__heading:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_color_fondo_de_texto: true
+  field_color_texto: true

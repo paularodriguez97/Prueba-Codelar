@@ -1,0 +1,10 @@
+uuid: 5309272d-3c49-48f9-a7ef-fc320450f6f0
+langcode: es
+status: true
+dependencies: {  }
+id: heading_component
+label: 'Componente Encabezado'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
